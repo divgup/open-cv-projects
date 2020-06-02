@@ -10,7 +10,7 @@ def nms(detections, threshold=.5):
     '''
     if len(detections) == 0:
         return []
-    # Sort the detections based on confidence score
+    #  Sort the detections based on confidence score
     detections = sorted(detections, key=lambda detections: detections[4],
             reverse=True)
     # Unique detections will be appended to this list
