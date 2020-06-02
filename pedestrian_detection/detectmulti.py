@@ -48,7 +48,6 @@ def detectMultiscale(original_img,scale,min_size):
                 positions.append((int(x_start),int(y_start),int(x_end),int(y_end),score))
                 #scores.append(score)        
         count+=1
-        #print(count)
     return positions    
 wsize = (128,64)
 step = 48         
@@ -58,5 +57,5 @@ original_img = cv2.imread('/kaggle/input/inriaperson/Test/JPEGImages/crop001514.
 positions_and_scores = detectMultiscale(original_img,scale,min_size)   
 lam =  0.5
 D = nms(positions_and_scoresc)
-print(len(D))      
+# print(len(D))      
 #print(len(positions_and_scores))
