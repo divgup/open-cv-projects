@@ -13,13 +13,6 @@ def gradients(image):
 	# convert uint image to float
     # to avoid problems with subtracting unsigned numbers
 		gray = gray.astype('float')
-
-	# origsobelx = cv2.Sobel(gray,cv2.CV_64F,1,0,ksize=5)	
-	# origsobely = cv2.Sobel(gray,cv2.CV_64F,0,1,ksize=5)
-	# sobelx = np.abs(origsobelx)
-	# sobelx_8u = np.uint8(sobelx)
-	# sobely = np.abs(origsobely)
-	# sobely_8u = np.uint8(origsobely)
 	origsobely = np.empty(gray.shape, dtype=np.double)
 	origsobelx = np.empty(gray.shape, dtype=np.double)
 	origsobely[-1,:] = 0
