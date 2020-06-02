@@ -1,3 +1,4 @@
+import hog
 import numpy as np
 from sklearn import preprocessing
 #from sklearn.externals import joblib
